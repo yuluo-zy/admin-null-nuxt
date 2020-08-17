@@ -1,1 +1,11 @@
-{"name":"admin-null-nuxt-bulma-dashboard","short_name":"admin-null-nuxt-bulma-dashboard","description":"Admin Null - Nuxt Bulma Dashboard","icons":[],"start_url":"/admin-null-nuxt/?standalone=true","display":"standalone","background_color":"#ffffff","theme_color":"#fff","lang":"en"}
+{
+  "name": "admin-null-nuxt-bulma-dashboard",
+  "short_name": "admin-null-nuxt-bulma-dashboard",
+  "description": "Admin Null - Nuxt Bulma Dashboard",
+  "icons": [],
+  "start_url": "/admin-null-nuxt/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#fff",
+  "lang": "en"
+}
