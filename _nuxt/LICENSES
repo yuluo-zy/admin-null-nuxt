@@ -1,5 +1,5 @@
 /*!
-  * vue-router v3.1.6
+  * vue-router v3.4.3
   * (c) 2020 Evan You
   * @license MIT
   */
@@ -29,16 +29,16 @@
  * Released under the MIT License.
  */
 
+/*!
+ * vuex v3.5.1
+ * (c) 2020 Evan You
+ * @license MIT
+ */
+
 /*! @preserve
  * numeral.js
  * version : 2.0.6
  * author : Adam Draper
  * license : MIT
  * http://adamwdraper.github.com/Numeral-js/
- */
-
-/**
- * vuex v3.1.3
- * (c) 2020 Evan You
- * @license MIT
  */

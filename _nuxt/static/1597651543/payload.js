@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/", {data:[{}],fetch:[],mutations:[["user",{name:"John Doe",email:"john@example.com",avatar:"https:\u002F\u002Favatars.dicebear.com\u002Fv2\u002Fgridy\u002FJohn-Doe.svg"}]]});
