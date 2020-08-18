@@ -1,7 +1,7 @@
 {
-  "name": "admin-null-nuxt-bulma-dashboard",
-  "short_name": "admin-null-nuxt-bulma-dashboard",
-  "description": "Admin Null - Nuxt Bulma Dashboard",
+  "name": "admin-null-nuxt",
+  "short_name": "admin-null-nuxt",
+  "description": "Admin Null Nuxt - Free Nuxt Bulma admin dashboard",
   "icons": [],
   "start_url": "/admin-null-nuxt/?standalone=true",
   "display": "standalone",
