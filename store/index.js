@@ -1,3 +1,8 @@
+import { login } from '~/api/user'
+import cookies from "js-cookie";
+import config from '~/config/config'
+import utils from '~/utils/utils'
+
 export const state = () => ({
   /* User */
   userName: null,
@@ -16,6 +21,7 @@ export const state = () => ({
 
   /* Dark mode */
   isDarkModeActive: false,
+  token: null,
 })
 
 export const mutations = {
@@ -70,4 +76,54 @@ export const mutations = {
       document.documentElement.classList.remove(htmlClassName)
     }
   },
+  setTokens (state, token) {
+    state.token = token
+    cookies.set(config.TOKEN_NAME, {
+      avatar: value.avatar,
+      // create_time: value.create_time,
+      mobile: value.mobile,
+      user_id: value.user_id,
+      username: value.username
+    });
+  },
 }
+export const actions= {
+
+  /**
+   * 登录并进行用户信息初始化
+   * @param commit
+   * @param userName
+   * @param password
+   * @returns {Promise<unknown>}
+   */
+  handleLogin ({ commit }, { userName, password }) {
+    return new Promise((resolve, reject) => {
+      login({
+        userName,
+        password
+      }).then(res => {
+        res = res.data
+        commit('setTokens', res.token)
+        console.error("uydeuwsytfeydws")
+        resolve()
+      }).catch(err => {
+        reject(err)
+      })
+    })
+  },
+  handleLogOut ({ commit }) {
+    commit('setTokens', '')
+  }
+}
+
+export const getters = {
+  getUserToken: (state) => () => {
+    if (state.token === null || state.token === '') {
+      console.log('jkhkj')
+      state.token = utils.getcookiesInClient()
+    }
+    return state.token
+  },
+}
+
+

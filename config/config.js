@@ -1,21 +1,30 @@
 export default {
-  IS_RELEASE: false, // true线上，false测试
-
-  BASE_URL: 'http://localhost:3000/api', // 测试
-
-  // BASE_URL: '//elm.caibowen.net/api', // 生产
-
-  // IMG_URL: 'http://localhost:9000/', // 测试
-
-  // IMG_URL: 'https://easytuan.gitee.io/node-elm-api/public/', // 生产（使用码云Gitee Pages 服务）
-
-  HEADERS: {
-    'Content-Type': 'application/json;charset=UTF-8'
-  },
-
-  TIMEOUT: 12000, // api超时时间
-
+  /**
+   * api 请求路径
+   */
+  // baseUrl: {
+  //   dev: '',
+  //   pro: '192.168.8.198:8000/'
+  // },
+  // baseUrl: 'https://order.espressif.com/api',
+  baseUrl: 'http://127.0.0.1:8000/api',
+  /**
+   * token名称
+   */
   TOKEN_KEY: 'token',
-  TOKEN_NAME: 'Bearer '
 
-};
+  /**
+   * token在Cookie中存储的天数，默认半天
+   */
+  cookieExpires: 0.5,
+
+  /**
+   * @description 默认打开的首页的路由name值，默认为home
+   */
+  homeName: 'panel',
+
+  /**
+   * token 前缀命名
+   */
+  TOKEN_NAME: 'Bearer '
+}

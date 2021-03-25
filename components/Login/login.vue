@@ -45,11 +45,14 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: 'login',
   data() {
     return {
-      redirectURL:'/'
+      redirectURL:'/',
+      userName: '',
+      password: ''
     }
   },
   mounted() {
@@ -60,18 +63,19 @@ export default {
     }
   },
   methods:{
+    ...mapActions([
+      'handleLogin'
+    ]),
     // 登录的方法
-    handleLogin() {
-      post(login, { phone: 15555429216, password: 123456 })
-        .then(res => {
-          if (res.status === 200) {
-            Cookie.set('token',res.token)
-            this.$router.push('/afterLogin')
-          }
-        })
-        .catch(error => {
-          console.log(error)
-        })
+    login() {
+
+      this['handleLogin']({
+        userName: this.userName,
+        password: this.password
+      }).then((res) => {
+        this.$router.push("")
+          console.warn("jhggg")
+      })
     }
   }
 }

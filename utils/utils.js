@@ -1,5 +1,6 @@
 import Cookie from 'js-cookie'
 import config from '~/config/config'
+
 export default {
   //获取服务端cookie
   getcookiesInServer(req) {
@@ -14,5 +15,6 @@ export default {
   getcookiesInClient() {
 
     return Cookie.get(config.TOKEN_KEY) ? Cookie.get(config.TOKEN_KEY) : ''
-  }
+  },
+
 }
