@@ -64,6 +64,7 @@ import ClientsTableSample from '@/components/ClientsTableSample'
 import CardComponent from '@/components/CardComponent'
 import TitleBar from '@/components/TitleBar'
 import HeroBar from '@/components/HeroBar'
+
 export default {
   name: 'Tables',
   components: {
