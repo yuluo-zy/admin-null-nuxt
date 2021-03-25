@@ -28,17 +28,17 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import CardComponent from '@/components/CardComponent'
-import TitleBar from '@/components/TitleBar'
-import HeroBar from '@/components/HeroBar'
-import ProfileUpdateForm from '@/components/ProfileUpdateForm'
-import PasswordUpdateForm from '@/components/PasswordUpdateForm'
-import Tiles from '@/components/Tiles'
-import UserAvatar from '@/components/UserAvatar'
+import { mapState } from "vuex";
+import CardComponent from "@/components/CardComponent";
+import TitleBar from "@/components/TitleBar";
+import HeroBar from "@/components/HeroBar";
+import ProfileUpdateForm from "@/components/ProfileUpdateForm";
+import PasswordUpdateForm from "@/components/PasswordUpdateForm";
+import Tiles from "@/components/Tiles";
+import UserAvatar from "@/components/UserAvatar";
 
 export default {
-  name: 'Profile',
+  name: "Profile",
   components: {
     UserAvatar,
     Tiles,
@@ -50,14 +50,14 @@ export default {
   },
   computed: {
     titleStack() {
-      return ['Admin', 'Profile']
+      return ["Admin", "Profile"];
     },
-    ...mapState(['userName', 'userEmail']),
+    ...mapState(["userName", "userEmail"]),
   },
   head() {
     return {
-      title: 'Profile — Admin Null Nuxt.js Bulma',
-    }
+      title: "Profile — Admin Null Nuxt.js Bulma",
+    };
   },
-}
+};
 </script>

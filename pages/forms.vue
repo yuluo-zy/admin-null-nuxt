@@ -125,15 +125,16 @@
 </template>
 
 <script>
-import mapValues from 'lodash/mapValues'
-import TitleBar from '@/components/TitleBar'
-import CardComponent from '@/components/CardComponent'
-import CheckboxPicker from '@/components/CheckboxPicker'
-import RadioPicker from '@/components/RadioPicker'
-import FilePicker from '@/components/FilePicker'
-import HeroBar from '@/components/HeroBar'
+import mapValues from "lodash/mapValues";
+import TitleBar from "@/components/TitleBar";
+import CardComponent from "@/components/CardComponent";
+import CheckboxPicker from "@/components/CheckboxPicker";
+import RadioPicker from "@/components/RadioPicker";
+import FilePicker from "@/components/FilePicker";
+import HeroBar from "@/components/HeroBar";
+
 export default {
-  name: 'Forms',
+  name: "Forms",
   components: {
     HeroBar,
     FilePicker,
@@ -159,34 +160,34 @@ export default {
         switch: true,
         file: null,
       },
-      departments: ['Business Development', 'Marketing', 'Sales'],
-    }
+      departments: ["Business Development", "Marketing", "Sales"],
+    };
   },
   computed: {
     titleStack() {
-      return ['Admin', 'Forms']
+      return ["Admin", "Forms"];
     },
   },
   methods: {
     submit() {},
     reset() {
       this.form = mapValues(this.form, (item) => {
-        if (item && typeof item === 'object') {
-          return []
+        if (item && typeof item === "object") {
+          return [];
         }
-        return null
-      })
+        return null;
+      });
 
       this.$buefy.snackbar.open({
-        message: 'Reset successfully',
+        message: "Reset successfully",
         queue: false,
-      })
+      });
     },
   },
   head() {
     return {
-      title: 'Forms — Admin Null Nuxt.js Bulma',
-    }
+      title: "Forms — Admin Null Nuxt.js Bulma",
+    };
   },
-}
+};
 </script>

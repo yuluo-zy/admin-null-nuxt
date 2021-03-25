@@ -117,19 +117,19 @@
 </template>
 
 <script>
-import axios from 'axios'
-import dayjs from 'dayjs'
-import find from 'lodash/find'
-import TitleBar from '@/components/TitleBar'
-import HeroBar from '@/components/HeroBar'
-import Tiles from '@/components/Tiles'
-import CardComponent from '@/components/CardComponent'
-import FilePicker from '@/components/FilePicker'
-import UserAvatar from '@/components/UserAvatar'
-import Notification from '@/components/Notification'
+import axios from "axios";
+import dayjs from "dayjs";
+import find from "lodash/find";
+import TitleBar from "@/components/TitleBar";
+import HeroBar from "@/components/HeroBar";
+import Tiles from "@/components/Tiles";
+import CardComponent from "@/components/CardComponent";
+import FilePicker from "@/components/FilePicker";
+import UserAvatar from "@/components/UserAvatar";
+import Notification from "@/components/Notification";
 
 export default {
-  name: 'ClientForm',
+  name: "ClientForm",
   components: {
     UserAvatar,
     FilePicker,
@@ -146,51 +146,51 @@ export default {
       form: this.getClearFormObject(),
       createdReadable: null,
       isProfileExists: false,
-    }
+    };
   },
   computed: {
     titleStack() {
-      let lastCrumb
+      let lastCrumb;
 
       if (this.isProfileExists) {
-        lastCrumb = this.form.name
+        lastCrumb = this.form.name;
       } else {
-        lastCrumb = 'New client'
+        lastCrumb = "New client";
       }
 
-      return ['Admin', 'Clients', lastCrumb]
+      return ["Admin", "Clients", lastCrumb];
     },
     heroTitle() {
       if (this.isProfileExists) {
-        return this.form.name
+        return this.form.name;
       } else {
-        return 'Create Client'
+        return "Create Client";
       }
     },
     heroRouterLinkTo() {
       if (this.isProfileExists) {
-        return '/client'
+        return "/client";
       } else {
-        return '/'
+        return "/";
       }
     },
     heroRouterLinkLabel() {
       if (this.isProfileExists) {
-        return 'New client'
+        return "New client";
       } else {
-        return 'Dashboard'
+        return "Dashboard";
       }
     },
     formCardTitle() {
       if (this.isProfileExists) {
-        return 'Edit Client'
+        return "Edit Client";
       } else {
-        return 'New Client'
+        return "New Client";
       }
     },
   },
   created() {
-    this.getData()
+    this.getData();
   },
   methods: {
     getClearFormObject() {
@@ -202,7 +202,7 @@ export default {
         created_date: new Date(),
         created_mm_dd_yyyy: null,
         progress: 0,
-      }
+      };
     },
     getData() {
       if (this.$route.params.id) {
@@ -212,48 +212,48 @@ export default {
             const item = find(
               r.data.data,
               (item) => item.id === parseInt(this.$route.params.id)
-            )
+            );
 
             if (item) {
-              this.isProfileExists = true
-              this.form = item
-              this.form.created_date = new Date(item.created_mm_dd_yyyy)
+              this.isProfileExists = true;
+              this.form = item;
+              this.form.created_date = new Date(item.created_mm_dd_yyyy);
               this.createdReadable = dayjs(
                 new Date(item.created_mm_dd_yyyy)
-              ).format('MMM D, YYYY')
+              ).format("MMM D, YYYY");
             } else {
-              this.$router.push({ name: 'client.new' })
+              this.$router.push({ name: "client.new" });
             }
           })
           .catch((e) => {
             this.$buefy.toast.open({
               message: `Error: ${e.message}`,
-              type: 'is-danger',
+              type: "is-danger",
               queue: false,
-            })
-          })
+            });
+          });
       }
     },
     input(v) {
-      this.createdReadable = dayjs(v).format('MMM D, YYYY')
+      this.createdReadable = dayjs(v).format("MMM D, YYYY");
     },
     submit() {
-      this.isLoading = true
+      this.isLoading = true;
 
       setTimeout(() => {
-        this.isLoading = false
+        this.isLoading = false;
 
         this.$buefy.snackbar.open({
-          message: 'Demo only',
+          message: "Demo only",
           queue: false,
-        })
-      }, 500)
+        });
+      }, 500);
     },
   },
   head() {
     return {
-      title: 'Client — Admin Null Nuxt.js Bulma',
-    }
+      title: "Client — Admin Null Nuxt.js Bulma",
+    };
   },
-}
+};
 </script>
