@@ -68,7 +68,8 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '~/plugins/after-each.js', mode: 'client' }],
+  plugins: [{ src: '~/plugins/after-each.js', mode: 'client' },
+    '~/plugins/axios.js'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -95,7 +96,14 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL: 'http://localhost:4000',
+    common: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json; charset=utf-8',
+    },
+    timeout: 15000
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
