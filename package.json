@@ -19,6 +19,7 @@
     "@nuxtjs/axios": "^5.12.1",
     "@nuxtjs/pwa": "^3.0.0",
     "chart.js": "^2.9.3",
+    "cookie-universal-nuxt": "^2.1.4",
     "dayjs": "^1.8.33",
     "js-cookie": "^2.2.1",
     "lodash": "^4.17.20",

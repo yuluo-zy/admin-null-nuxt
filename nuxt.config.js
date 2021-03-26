@@ -68,7 +68,14 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '~/plugins/after-each.js', mode: 'client' }],
+  plugins: [{ src: '~/plugins/after-each.js', mode: 'client' },
+    '~/plugins/router',
+
+    {
+      src: '~/plugins/axios',
+      ssr: true // 开启服务端渲染
+    },
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -90,6 +97,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    'cookie-universal-nuxt'
   ],
   /*
    ** Axios module configuration

@@ -88,31 +88,12 @@ export const mutations = {
   },
 }
 export const actions= {
-
-  /**
-   * 登录并进行用户信息初始化
-   * @param commit
-   * @param userName
-   * @param password
-   * @returns {Promise<unknown>}
-   */
-  handleLogin ({ commit }, { userName, password }) {
-    return new Promise((resolve, reject) => {
-      login({
-        userName,
-        password
-      }).then(res => {
-        res = res.data
-        commit('setTokens', res.token)
-        console.error("uydeuwsytfeydws")
-        resolve()
-      }).catch(err => {
-        reject(err)
-      })
-    })
-  },
-  handleLogOut ({ commit }) {
-    commit('setTokens', '')
+  nuxtServerInit(store, { app: { $cookies } }) {
+    // 初始化东西到store里 token信息
+    // console.log('nuxtServerInit', store, context)
+    console.log('nuxtServerInit')
+    let user = $cookies.get('user') ? $cookies.get('user') : {err:2, msg: '未登录', token: ''}
+    store.commit('users/M_UPDATE_USER', user)
   }
 }
 
