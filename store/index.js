@@ -1,7 +1,4 @@
-import { login } from '~/api/user'
-import cookies from "js-cookie";
 import config from '~/config/config'
-import utils from '~/utils/utils'
 
 export const state = () => ({
   /* User */
@@ -76,35 +73,27 @@ export const mutations = {
       document.documentElement.classList.remove(htmlClassName)
     }
   },
-  setTokens (state, token) {
+
+  setToken(state, token) {
     state.token = token
-    cookies.set(config.TOKEN_NAME, {
-      avatar: value.avatar,
-      // create_time: value.create_time,
-      mobile: value.mobile,
-      user_id: value.user_id,
-      username: value.username
-    });
+  },
+  setLogoutToken(state, { app: { $cookies } }) {
+    state.token = ''
+    $cookies.remove(config.TOKEN_NAME)
   },
 }
-export const actions= {
+export const actions = {
   nuxtServerInit(store, { app: { $cookies } }) {
-    // 初始化东西到store里 token信息
-    // console.log('nuxtServerInit', store, context)
     console.log('nuxtServerInit')
-    let user = $cookies.get('user') ? $cookies.get('user') : {err:2, msg: '未登录', token: ''}
-    store.commit('users/M_UPDATE_USER', user)
-  }
+    const token = $cookies.get(config.TOKEN_NAME)
+      ? $cookies.get(config.TOKEN_NAME)
+      : null
+    store.commit('setToken', token)
+  },
 }
 
 export const getters = {
-  getUserToken: (state) => () => {
-    if (state.token === null || state.token === '') {
-      console.log('jkhkj')
-      state.token = utils.getcookiesInClient()
-    }
-    return state.token
+  getToken(state, { app: { $cookies } }) {
+    return state.token ? state.token : $cookies.get(config.TOKEN_NAME)
   },
 }
-
-

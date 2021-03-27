@@ -26,5 +26,5 @@ export default {
   /**
    * token 前缀命名
    */
-  TOKEN_NAME: 'Bearer '
+  TOKEN_NAME: 'Bearer ',
 }

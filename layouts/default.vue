@@ -15,6 +15,7 @@ import FooterBar from '@/components/FooterBar'
 
 export default {
   name: 'App',
+  middleware: 'auth',
   components: {
     FooterBar,
     AsideMenu,

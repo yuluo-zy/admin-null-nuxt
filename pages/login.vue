@@ -4,9 +4,7 @@
       class="columns hero-body is-multiline is-vcentered"
       style="width: 100%;"
     >
-      <div
-        class="column is-10 is-offset-1 register box"
-      >
+      <div class="column is-10 is-offset-1 register box">
         <div class="columns">
           <div
             class="column left is-7"
@@ -28,16 +26,14 @@
               </h2>
               <br /><br />
             </div>
-            <div
-              style="padding: 0; margin: 0; position: absolute; bottom: 0;"
-            >
+            <div style="padding: 0; margin: 0; position: absolute; bottom: 0;">
               <img
                 src="/img/backcolor.png"
                 style="position: relative; bottom: -11px;"
               />
             </div>
           </div>
-          <login/>
+          <login />
         </div>
       </div>
     </div>
@@ -45,18 +41,16 @@
 </template>
 
 <script>
-import login from "@/components/Login/login"
+import login from '@/components/Login/login'
 export default {
-  name: "Login",
+  name: 'Login',
   components: {
-    login
+    login,
   },
   layout(context) {
-    return "login_layout";
+    return 'login_layout'
   },
-};
+}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
