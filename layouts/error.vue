@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <h1>页面不存在 {{ error.message }}</h1>
     <h1>v-if="error.statusCode"</h1>
   </div>

@@ -18,11 +18,11 @@
             <div style="padding-left: 3rem;">
               <img
                 src="/img/logo-black.svg"
-                alt="乐鑫 订单自动化管理系统"
+                alt="龙猫实验室"
                 style="width: 25rem; height: 7rem;"
               />
               <h2 class="subtitle colored is-4" style="margin-left: 3rem;">
-                Chip Order generation system
+                龙猫实验室
               </h2>
               <br /><br />
             </div>
@@ -46,6 +46,11 @@ export default {
   name: 'Login',
   components: {
     login,
+  },
+  middleware({ store, route, redirect, params, query }) {
+    if (store.state.token !== null) {
+      redirect('/home')
+    }
   },
   layout(context) {
     return 'login_layout'

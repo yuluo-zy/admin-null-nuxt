@@ -79,21 +79,22 @@ export const mutations = {
   },
   setLogoutToken(state, { app: { $cookies } }) {
     state.token = ''
-    $cookies.remove(config.TOKEN_NAME)
+    $cookies.remove(config.TOKEN_KEY)
   },
 }
 export const actions = {
   nuxtServerInit(store, { app: { $cookies } }) {
     console.log('nuxtServerInit')
-    const token = $cookies.get(config.TOKEN_NAME)
-      ? $cookies.get(config.TOKEN_NAME)
+    const token = $cookies.get(config.TOKEN_KEY)
+      ? $cookies.get(config.TOKEN_KEY)
       : null
     store.commit('setToken', token)
+    console.warn(token)
   },
 }
 
 export const getters = {
   getToken(state, { app: { $cookies } }) {
-    return state.token ? state.token : $cookies.get(config.TOKEN_NAME)
+    return state.token ? state.token : $cookies.get(config.TOKEN_KEY)
   },
 }

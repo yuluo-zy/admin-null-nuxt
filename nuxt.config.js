@@ -24,7 +24,7 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'static',
+  target: 'server',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -68,12 +68,13 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '~/plugins/after-each.js', mode: 'client' },
+  plugins: [
+    { src: '~/plugins/after-each.js', mode: 'client' },
     '~/plugins/router',
 
     {
       src: '~/plugins/axios',
-      ssr: true // 开启服务端渲染
+      ssr: true, // 开启服务端渲染
     },
   ],
   /*
@@ -97,19 +98,29 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    'cookie-universal-nuxt'
+    'cookie-universal-nuxt',
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'http://localhost:4000',
+    proxy: true,
     common: {
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json; charset=utf-8',
     },
-    timeout: 15000
+    timeout: 15000,
+  },
+  proxy: {
+    // 代理
+    '/api/': {
+      target: 'http://localhost:8000', // 代理转发地址
+      changeOrigin: true,
+      pathRewrite: {
+        // '^/api': ''
+      },
+    },
   },
   /*
    ** Build configuration

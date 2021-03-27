@@ -5,7 +5,7 @@
     <h1 class="title is-4">Sign in today</h1>
     <br />
     <br />
-    <p class="description is-size-6">欢迎使用自动化订单管理系统</p>
+    <p class="description is-size-6">欢迎使用龙猫实验室管理系统</p>
     <br /><br />
     <form>
       <div class="field self_mid" style="max-width: 70%;">
@@ -14,7 +14,7 @@
             v-model="userName"
             class="input is-medium"
             type="text"
-            placeholder="Email"
+            placeholder="手机号"
           />
         </div>
       </div>
@@ -27,52 +27,69 @@
             v-model="password"
             class="input is-medium"
             type="password"
-            placeholder="password"
+            placeholder="密码"
           />
         </div>
       </div>
       <br /><br />
-      <button
+      <b-button
         class="button is-block is-primary is-fullwidth is-medium self_mid animated rubberBand"
         style="max-width: 70%;"
-        @click="login"
+        @click="login()"
       >
         Submit
-      </button>
+      </b-button>
       <br />
     </form>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+// import { SnackbarProgrammatic as Snackbar } from 'buefy'
+import config from '~/config/config'
 export default {
   name: 'Login',
   data() {
     return {
-      redirectURL: '/',
       userName: '',
       password: '',
     }
   },
-  mounted() {
-    // 初始化路由
-    const rediretUrl = this.$route.query.ref
-    if (rediretUrl) {
-      this.redirectURL = rediretUrl
-    }
-  },
   methods: {
-    ...mapActions(['handleLogin']),
     // 登录的方法
     login() {
-      this.handleLogin({
-        userName: this.userName,
-        password: this.password,
+      console.error('jlkjlßj')
+      this.$axios({
+        url: '/api/token/',
+        method: 'post',
+        data: {
+          username: this.userName,
+          password: this.password,
+        },
       }).then((res) => {
-        this.$router.push('')
-        console.warn('jhggg')
+        console.warn(res)
+        this.$cookies.set(config.TOKEN_KEY, res.access)
+        this.$store.commit('setToken', res.access)
+        if (
+          !this.$route.query.path ||
+          /login|reg/.test(this.$route.query.path)
+        ) {
+          this.$router.replace('/home')
+        } else {
+          this.$router.replace(this.$route.query.path)
+        }
       })
+      // eslint-disable-next-line handle-callback-err
+      // .catch((error) => {
+      //   Snackbar.open({
+      //     message: '账户或密码不正确,请重新登录',
+      //     actionText: 'Relogin',
+      //     duration: 3000,
+      //     type: 'is-danger',
+      //     position: 'is-top-right',
+      //     queue: false,
+      //   })
+      // })
     },
   },
 }
