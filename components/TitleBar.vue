@@ -11,18 +11,18 @@
         </div>
       </div>
       <div class="level-right">
-        <div class="level-item">
-          <div class="buttons is-right">
-            <a
-              href="https://admin-null-nuxt.justboil.me/"
-              target="_blank"
-              class="button is-light"
-            >
-              <b-icon icon="credit-card" custom-size="default" />
-              <span>Premium Demo</span>
-            </a>
-          </div>
-        </div>
+        <!--        <div class="level-item">-->
+        <!--          <div class="buttons is-right">-->
+        <!--            <a-->
+        <!--              href="https://admin-null-nuxt.justboil.me/"-->
+        <!--              target="_blank"-->
+        <!--              class="button is-light"-->
+        <!--            >-->
+        <!--              <b-icon icon="credit-card" custom-size="default" />-->
+        <!--              <span>Premium Demo</span>-->
+        <!--            </a>-->
+        <!--          </div>-->
+        <!--        </div>-->
       </div>
     </div>
   </section>

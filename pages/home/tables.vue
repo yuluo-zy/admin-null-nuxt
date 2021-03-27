@@ -67,6 +67,9 @@ import HeroBar from '~/components/HeroBar'
 
 export default {
   name: 'Tables',
+  layout(context) {
+    return 'home'
+  },
   components: {
     HeroBar,
     TitleBar,

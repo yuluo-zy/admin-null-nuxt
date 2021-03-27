@@ -48,6 +48,9 @@ export default {
     TitleBar,
     CardComponent,
   },
+  layout(context) {
+    return 'home'
+  },
   computed: {
     titleStack() {
       return ['Admin', 'Profile']

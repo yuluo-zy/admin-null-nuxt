@@ -27,9 +27,9 @@ export default {
         'General',
         [
           {
-            to: '/',
+            to: '/home',
             icon: 'desktop-mac',
-            label: 'Dashboard',
+            label: '数据面板',
           },
         ],
         'Examples',
@@ -40,49 +40,49 @@ export default {
             icon: 'weather-night',
           },
           {
-            to: '/tables',
-            label: 'Tables',
+            to: '/home/tables',
+            label: '订单中心',
             icon: 'table',
             updateMark: true,
           },
           {
-            to: '/forms',
+            to: '/home/forms',
             label: 'Forms',
             icon: 'square-edit-outline',
           },
           {
-            to: '/profile',
-            label: 'Profile',
+            to: '/home/profile',
+            label: '账号管理',
             icon: 'account-circle',
           },
-          {
-            label: 'Submenus',
-            subLabel: 'Submenus Example',
-            icon: 'view-list',
-            menu: [
-              {
-                href: '#void',
-                label: 'Sub-item One',
-              },
-              {
-                href: '#void',
-                label: 'Sub-item Two',
-              },
-            ],
-          },
+          // {
+          //   label: 'Submenus',
+          //   subLabel: 'Submenus Example',
+          //   icon: 'view-list',
+          //   menu: [
+          //     {
+          //       href: '#void',
+          //       label: 'Sub-item One',
+          //     },
+          //     {
+          //       href: '#void',
+          //       label: 'Sub-item Two',
+          //     },
+          //   ],
+          // },
         ],
         'About',
         [
           {
             href: 'https://admin-null-nuxt.justboil.me',
-            label: 'Premium Demo',
+            label: '联系我们',
             icon: 'credit-card',
           },
-          {
-            href: 'https://justboil.me/bulma-admin-template/null-nuxt',
-            label: 'About',
-            icon: 'help-circle',
-          },
+          // {
+          //   href: 'https://justboil.me/bulma-admin-template/null-nuxt',
+          //   label: '联系我们',
+          //   icon: 'help-circle',
+          // },
         ],
       ]
     },

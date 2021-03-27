@@ -2,7 +2,7 @@
   <div>
     <title-bar :title-stack="titleStack" />
     <hero-bar :has-right-visible="false">
-      Dashboard
+      数据面板
     </hero-bar>
     <section class="section is-main-section">
       <tiles>
@@ -78,6 +78,9 @@ export default {
     Tiles,
     HeroBar,
     TitleBar,
+  },
+  layout(context) {
+    return 'home'
   },
   data() {
     return {

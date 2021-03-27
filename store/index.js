@@ -78,7 +78,7 @@ export const mutations = {
     state.token = token
   },
   setLogoutToken(state, { app: { $cookies } }) {
-    state.token = ''
+    state.token = null
     $cookies.remove(config.TOKEN_KEY)
   },
 }

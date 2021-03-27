@@ -7,11 +7,11 @@
       >
         <b-icon :icon="menuToggleMobileIcon" />
       </a>
-      <div class="navbar-item no-left-space-touch">
-        <div class="control">
-          <input class="input" placeholder="Search everywhere..." />
-        </div>
-      </div>
+      <!--      <div class="navbar-item no-left-space-touch">-->
+      <!--        <div class="control">-->
+      <!--          <input class="input" placeholder="Search everywhere..." />-->
+      <!--        </div>-->
+      <!--      </div>-->
     </div>
     <div class="navbar-brand is-right">
       <a
@@ -26,33 +26,33 @@
       :class="{ 'is-active': isMenuNavBarActive }"
     >
       <div class="navbar-end">
-        <nav-bar-menu class="has-divider">
-          <b-icon icon="menu" custom-size="default" />
-          <span>Sample Menu</span>
-          <div slot="dropdown" class="navbar-dropdown">
-            <nuxt-link
-              to="/profile"
-              class="navbar-item"
-              exact-active-class="is-active"
-            >
-              <b-icon icon="account" custom-size="default" />
-              <span>My Profile</span>
-            </nuxt-link>
-            <a class="navbar-item">
-              <b-icon icon="settings" custom-size="default" />
-              <span>Settings</span>
-            </a>
-            <a class="navbar-item">
-              <b-icon icon="email" custom-size="default" />
-              <span>Messages</span>
-            </a>
-            <hr class="navbar-divider" />
-            <a class="navbar-item">
-              <b-icon icon="logout" custom-size="default" />
-              <span>Log Out</span>
-            </a>
-          </div>
-        </nav-bar-menu>
+        <!--        <nav-bar-menu class="has-divider">-->
+        <!--          <b-icon icon="menu" custom-size="default" />-->
+        <!--          <span>Sample Menu</span>-->
+        <!--          <div slot="dropdown" class="navbar-dropdown">-->
+        <!--            <nuxt-link-->
+        <!--              to="/profile"-->
+        <!--              class="navbar-item"-->
+        <!--              exact-active-class="is-active"-->
+        <!--            >-->
+        <!--              <b-icon icon="account" custom-size="default" />-->
+        <!--              <span>My Profile</span>-->
+        <!--            </nuxt-link>-->
+        <!--            <a class="navbar-item">-->
+        <!--              <b-icon icon="settings" custom-size="default" />-->
+        <!--              <span>Settings</span>-->
+        <!--            </a>-->
+        <!--            <a class="navbar-item">-->
+        <!--              <b-icon icon="email" custom-size="default" />-->
+        <!--              <span>Messages</span>-->
+        <!--            </a>-->
+        <!--            <hr class="navbar-divider" />-->
+        <!--            <a class="navbar-item">-->
+        <!--              <b-icon icon="logout" custom-size="default" />-->
+        <!--              <span>Log Out</span>-->
+        <!--            </a>-->
+        <!--          </div>-->
+        <!--        </nav-bar-menu>-->
         <nav-bar-menu class="has-divider has-user-avatar">
           <user-avatar />
           <div class="is-user-name">
@@ -61,25 +61,25 @@
 
           <div slot="dropdown" class="navbar-dropdown">
             <nuxt-link
-              to="/profile"
+              to="/home/profile"
               class="navbar-item"
               exact-active-class="is-active"
             >
               <b-icon icon="account" custom-size="default" />
-              <span>My Profile</span>
+              <span>我的信息</span>
             </nuxt-link>
             <a class="navbar-item">
               <b-icon icon="settings" custom-size="default" />
-              <span>Settings</span>
+              <span>系统设置</span>
             </a>
             <a class="navbar-item">
               <b-icon icon="email" custom-size="default" />
-              <span>Messages</span>
+              <span>消息接收</span>
             </a>
             <hr class="navbar-divider" />
             <a class="navbar-item">
               <b-icon icon="logout" custom-size="default" />
-              <span>Log Out</span>
+              <span @click="logout">登出</span>
             </a>
           </div>
         </nav-bar-menu>
@@ -92,7 +92,7 @@
           <span>Dark mode</span>
         </a>
         <a
-          href="https://justboil.me/bulma-admin-template/null-nuxt"
+          href=""
           class="navbar-item has-divider is-desktop-icon-only"
           title="About"
         >
@@ -156,8 +156,9 @@ export default {
       this.$store.commit('darkModeToggle')
     },
     logout() {
+      this.$store.commit('setLogoutToken', { app: this })
       this.$buefy.snackbar.open({
-        message: 'Log out clicked',
+        message: '登出成功',
         queue: false,
       })
     },

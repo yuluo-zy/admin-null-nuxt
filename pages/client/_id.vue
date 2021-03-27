@@ -139,6 +139,9 @@ export default {
     TitleBar,
     Notification,
   },
+  layout(context) {
+    return 'home'
+  },
   data() {
     return {
       id: null,

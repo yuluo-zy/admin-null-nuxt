@@ -135,6 +135,9 @@ import HeroBar from '~/components/HeroBar'
 
 export default {
   name: 'Forms',
+  layout(context) {
+    return 'home'
+  },
   components: {
     HeroBar,
     FilePicker,
