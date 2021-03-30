@@ -88,11 +88,12 @@ export default {
     },
   },
   created() {
-    this.$store.commit('user', {
-      name: 'John Doe',
-      email: 'john@example.com',
-      avatar: 'https://avatars.dicebear.com/v2/gridy/John-Doe.svg',
-    })
+    // this.$store.commit('user', {
+    //   name: 'John Doe',
+    //   email: 'john@example.com',
+    //   // avatar: 'https://avatars.dicebear.com/v2/gridy/John-Doe.svg',
+    // })
+    this.$store.dispatch('getUser', { app: this })
   },
   mounted() {
     document.documentElement.classList.add('has-aside-left')

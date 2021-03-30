@@ -1,7 +1,6 @@
 /* 插件全局守卫 */
 
 export default ({ app, redirect, params, query, store }) => {
-  console.log('插件')
   // // app == vue实例
   // // redirect 跳转函数
   // app.router.beforeEach((to, from, next) => {

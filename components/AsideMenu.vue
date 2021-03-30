@@ -1,7 +1,9 @@
 <template>
   <aside v-show="isAsideVisible" class="aside is-placed-left is-expanded">
     <aside-tools :is-main-menu="true">
-      <span slot="label" @click="index"> <b>龙猫实验室 </b> 后台管理系统 </span>
+      <span slot="label" @click="index">
+        <b>龙猫实验室jjj </b> 后台管理系统
+      </span>
     </aside-tools>
     <div class="menu is-menu-main">
       <template v-for="(menuGroup, index) in menu">

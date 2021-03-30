@@ -5,7 +5,7 @@
     <h1 class="title is-4">Sign in today</h1>
     <br />
     <br />
-    <p class="description is-size-6">欢迎使用龙猫实验室管理系统</p>
+    <p class="description is-size-6">hh</p>
     <br /><br />
     <form>
       <div class="field self_mid" style="max-width: 70%;">
@@ -58,7 +58,6 @@ export default {
   methods: {
     // 登录的方法
     login() {
-      console.error('jlkjlßj')
       this.$axios({
         url: '/api/token/',
         method: 'post',
@@ -67,7 +66,6 @@ export default {
           password: this.password,
         },
       }).then((res) => {
-        console.warn(res)
         this.$cookies.set(config.TOKEN_KEY, res.access)
         this.$store.commit('setToken', res.access)
         if (

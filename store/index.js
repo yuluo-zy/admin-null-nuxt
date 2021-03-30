@@ -5,6 +5,9 @@ export const state = () => ({
   userName: null,
   userEmail: null,
   userAvatar: null,
+  userPhone: null,
+
+  userInfo: null,
 
   /* NavBar */
   isNavBarVisible: true,
@@ -81,15 +84,34 @@ export const mutations = {
     state.token = null
     $cookies.remove(config.TOKEN_KEY)
   },
+  setUserInfo(state, res) {
+    state.userInfo = res
+    if (res.name) {
+      state.userName = res.name ? res.name : res.username
+    }
+    if (res.email) {
+      state.userEmail = res.email
+    }
+    if (res.phone) {
+      state.userPhone = res.phone
+    }
+  },
 }
 export const actions = {
   nuxtServerInit(store, { app: { $cookies } }) {
-    console.log('nuxtServerInit')
     const token = $cookies.get(config.TOKEN_KEY)
       ? $cookies.get(config.TOKEN_KEY)
       : null
     store.commit('setToken', token)
-    console.warn(token)
+  },
+
+  getUser(store, { app: { $axios } }) {
+    $axios({
+      url: '/api/users/me',
+      method: 'get',
+    }).then((res) => {
+      store.commit('setUserInfo', res)
+    })
   },
 }
 
