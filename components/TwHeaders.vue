@@ -1,6 +1,8 @@
 <template>
   <!-- Section 1 -->
-  <section class="w-full px-9 text-gray-700 bg-white body-font">
+  <section
+    class="fixed top-1 z-50 w-full px-9 text-gray-700 bg-white body-font"
+  >
     <div
       class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl"
     >

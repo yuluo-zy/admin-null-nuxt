@@ -52,13 +52,6 @@ export default {
         rel: 'stylesheet',
         type: 'text/css',
         href:
-          'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css',
-      },
-
-      {
-        rel: 'stylesheet',
-        type: 'text/css',
-        href:
           'https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css',
       },
     ],
@@ -83,6 +76,7 @@ export default {
       src: '~/plugins/axios',
       ssr: true, // 开启服务端渲染
     },
+    { src: '@/plugins/wow.js', mode: 'client' },
   ],
   /*
    ** Auto import components
