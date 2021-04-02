@@ -17,27 +17,8 @@
           <div class="flex flex-col items-center w-full space-x-5 lg:flex-row">
             <a
               href="#_"
-              class="w-full px-6 py-6 text-xl font-medium text-center text-white bg-purple-600 shadow-xl xl:px-12 xl:text-2xl lg:w-auto hover:bg-purple-700 rounded-3xl"
+              class="w-full px-10 py-6 text-xl font-medium text-center text-white bg-yellow-500 shadow-xl xl:px-12 xl:text-2xl lg:w-auto hover:bg-yellow-400 rounded-3xl"
               >Try for free</a
-            >
-            <a
-              href="#_"
-              class="flex items-center justify-center w-full px-4 py-6 mt-5 text-lg font-medium text-center text-yellow-400 underline xl:px-10 xl:text-xl lg:mt-0 lg:w-auto rounded-3xl hover:bg-gray-50"
-            >
-              <svg
-                class="w-6 h-6 mt-1 mr-2 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 847 1058.75"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-              >
-                <defs></defs>
-                <path
-                  class="fil0"
-                  d="M636 459L447 583 257 708c-20 12-46 7-59-13-5-7-7-15-7-23V174c0-23 19-42 42-42 10 0 18 3 25 8l189 124 189 124c20 13 25 39 13 58-4 6-8 10-13 13z"
-                ></path>
-              </svg>
-              <span>Watch The Video</span></a
             >
           </div>
         </div>

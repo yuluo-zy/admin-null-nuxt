@@ -1,5 +1,7 @@
 <template>
   <!-- Section 1 -->
+
+  <!-- Section 1 -->
   <section
     class="relative w-full py-12 overflow-hidden bg-white md:py-20 xl:pt-32 xl:pb-40"
   >
@@ -20,14 +22,14 @@
             <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
               <div class="relative h-full ml-0 mr-0 sm:mr-10">
                 <span
-                  class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"
+                  class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"
                 ></span>
                 <div
-                  class="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg"
+                  class="relative h-full p-5 bg-white border-2 border-yellow-400 rounded-lg"
                 >
                   <div class="flex items-center -mt-1">
                     <svg
-                      class="w-8 h-8 text-indigo-500 fill-current"
+                      class="w-8 h-8 text-yellow-400 fill-current"
                       viewBox="0 0 20 20"
                     >
                       <polygon
@@ -48,7 +50,7 @@
                     </h3>
                   </div>
                   <p
-                    class="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase"
+                    class="mt-3 mb-1 text-xs font-medium text-yellow-400 uppercase"
                   >
                     PREMIUM FEATURE
                   </p>
@@ -63,14 +65,14 @@
             <div class="w-full sm:w-1/2">
               <div class="relative h-full ml-0 md:mr-10">
                 <span
-                  class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-purple-500 rounded-lg"
+                  class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"
                 ></span>
                 <div
-                  class="relative h-full p-5 bg-white border-2 border-purple-500 rounded-lg"
+                  class="relative h-full p-5 bg-white border-2 border-yellow-400 rounded-lg"
                 >
                   <div class="flex items-center -mt-1">
                     <svg
-                      class="w-8 h-8 text-purple-500 fill-current"
+                      class="w-8 h-8 text-yellow-400 fill-current"
                       viewBox="0 0 20 20"
                     >
                       <path
@@ -85,7 +87,7 @@
                     </h3>
                   </div>
                   <p
-                    class="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase"
+                    class="mt-3 mb-1 text-xs font-medium text-yellow-400 uppercase"
                   >
                     NEW FEATURE
                   </p>
@@ -103,14 +105,14 @@
             <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
               <div class="relative h-full ml-0 mr-0 sm:mr-10">
                 <span
-                  class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"
+                  class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"
                 ></span>
                 <div
-                  class="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg"
+                  class="relative h-full p-5 bg-white border-2 border-yellow-400 rounded-lg"
                 >
                   <div class="flex items-center -mt-1">
                     <svg
-                      class="w-8 h-8 text-blue-400 fill-current"
+                      class="w-8 h-8 text-yellow-400 fill-current"
                       viewBox="0 0 20 20"
                     >
                       <path
@@ -131,7 +133,7 @@
                     </h3>
                   </div>
                   <p
-                    class="mt-3 mb-1 text-xs font-medium text-blue-400 uppercase"
+                    class="mt-3 mb-1 text-xs font-medium text-yellow-400 uppercase"
                   >
                     FREE FEATURE
                   </p>
@@ -145,14 +147,14 @@
             <div class="w-full sm:w-1/2">
               <div class="relative h-full ml-0 md:mr-10">
                 <span
-                  class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg"
+                  class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"
                 ></span>
                 <div
-                  class="relative h-full p-5 bg-white border-2 border-green-500 rounded-lg"
+                  class="relative h-full p-5 bg-white border-2 border-yellow-400 rounded-lg"
                 >
                   <div class="flex items-center -mt-1">
                     <svg
-                      class="w-8 h-8 text-green-500 fill-current"
+                      class="w-8 h-8 text-yellow-400 fill-current"
                       viewBox="0 0 20 20"
                     >
                       <path
@@ -164,7 +166,7 @@
                     </h3>
                   </div>
                   <p
-                    class="mt-3 mb-1 text-xs font-medium text-green-500 uppercase"
+                    class="mt-3 mb-1 text-xs font-medium text-yellow-400 uppercase"
                   >
                     PREMIUM FEATURE
                   </p>

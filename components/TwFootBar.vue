@@ -1,189 +1,118 @@
 <template>
   <!-- Section 1 -->
-  <section class="w-full bg-gray-900">
-    <div class="px-6 mx-auto max-w-7xl xl:px-12">
-      <div
-        class="box-border flex flex-wrap pt-10 pb-0 text-base leading-tight text-gray-500 md:pb-6"
-      >
-        <div class="flex-initial w-1/2 px-2 pb-6 leading-tight md:w-1/4">
-          <div class="box-border text-base text-gray-500">
-            <div
-              class="flex items-center justify-center w-10 h-10 mr-3 rounded-lg mb-7 bg-gradient-to-br from-purple-500 via-indigo-600 to-blue-500 rounded-xxl"
-            >
-              <svg
-                class="w-5 h-5 text-white fill-current"
-                viewBox="0 0 39 15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.252 1.152C4.184 2.526.454 6.918.061 14.329c1.963-4.049 4.798-5.975 8.503-5.778 2.115.112 3.84 1.295 5.75 2.603 3.11 2.133 6.712 4.601 13.281 3.324 7.068-1.374 10.798-5.766 11.191-13.177-1.963 4.049-4.798 5.975-8.503 5.779-2.115-.113-3.84-1.296-5.75-2.604-3.11-2.133-6.712-4.601-13.281-3.324z"
-                  fill-rule="evenodd"
-                ></path>
-              </svg>
-            </div>
-            <ul class="p-0 m-0 text-base leading-tight list-none">
-              <li
-                class="box-border py-2 text-sm font-normal text-left text-gray-500 md:text-base md:mb-1"
-              >
-                <a
-                  href="#_"
-                  class="text-base leading-tight no-underline bg-transparent cursor-pointer hover:text-gray-400"
-                  >Home</a
-                >
-              </li>
-              <li
-                class="box-border py-2 text-sm font-normal text-left text-gray-500 md:text-base md:mb-1"
-              >
-                <a
-                  href="#_"
-                  class="text-base leading-tight no-underline bg-transparent cursor-pointer hover:text-gray-400"
-                  >Downloads</a
-                >
-              </li>
-              <li
-                class="box-border py-2 text-sm font-normal text-left text-gray-500 md:text-base md:mb-1"
-              >
-                <a
-                  href="#_"
-                  class="text-base leading-tight no-underline bg-transparent cursor-pointer hover:text-gray-400"
-                  >Web App</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          width="6,3"
-          class="flex-initial w-1/2 px-2 pb-6 leading-tight md:w-1/4"
-        >
-          <div class="box-border text-base text-gray-500">
-            <h2
-              class="mb-8 font-sans text-xl font-bold tracking-wide text-gray-100 md:text-2xl"
-            >
-              Product
-            </h2>
-            <ul class="p-0 m-0 text-base leading-tight list-none">
-              <li
-                class="box-border py-2 text-sm font-normal text-left text-gray-500 md:text-base md:mb-1"
-              >
-                <a
-                  href="#_"
-                  class="text-base leading-tight no-underline bg-transparent cursor-pointer hover:text-gray-400"
-                  >Drag'n Drop Builder</a
-                >
-              </li>
-              <li
-                class="box-border py-2 text-sm font-normal text-left text-gray-500 md:text-base md:mb-1"
-              >
-                <a
-                  href="#_"
-                  class="text-base leading-tight no-underline bg-transparent cursor-pointer hover:text-gray-400"
-                  >Developer Inspector</a
-                >
-              </li>
-              <li
-                class="box-border py-2 text-sm font-normal text-left text-gray-500 md:text-base md:mb-1"
-              >
-                <a
-                  href="#_"
-                  class="text-base leading-tight no-underline bg-transparent cursor-pointer hover:text-gray-400"
-                  >System Import</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          width="6,3"
-          class="flex-initial w-1/2 px-2 pb-6 leading-tight md:w-1/4"
-        >
-          <div class="box-border text-base text-gray-500">
-            <h2
-              class="mb-8 font-sans text-xl font-bold tracking-wide text-gray-100 md:text-2xl"
-            >
-              Company
-            </h2>
-            <ul class="p-0 m-0 text-base leading-tight list-none">
-              <li
-                class="box-border py-2 text-sm font-normal text-left text-gray-500 md:text-base md:mb-1"
-              >
-                <a
-                  href="#_"
-                  class="text-base leading-tight no-underline bg-transparent cursor-pointer hover:text-gray-400"
-                  >Contact us</a
-                >
-              </li>
-              <li
-                class="box-border py-2 text-sm font-normal text-left text-gray-500 md:text-base md:mb-1"
-              >
-                <a
-                  href="#_"
-                  class="text-base leading-tight no-underline bg-transparent cursor-pointer hover:text-gray-400"
-                  >Technology</a
-                >
-              </li>
-              <li
-                class="box-border py-2 text-sm font-normal text-left text-gray-500 md:text-base md:mb-1"
-              >
-                <a
-                  href="#_"
-                  class="text-base leading-tight no-underline bg-transparent cursor-pointer hover:text-gray-400"
-                  >Security</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="flex-initial w-1/2 px-2 pb-6 leading-tight md:w-1/4">
-          <div class="box-border text-base text-gray-500">
-            <h2
-              class="mb-8 font-sans text-xl font-bold tracking-wide text-gray-100 md:text-2xl"
-            >
-              Support
-            </h2>
-            <ul class="p-0 m-0 text-base leading-tight list-none">
-              <li
-                class="box-border py-2 text-sm font-normal text-left text-gray-500 md:text-base md:mb-1"
-              >
-                <a
-                  href="#_"
-                  class="text-base leading-tight no-underline bg-transparent cursor-pointer hover:text-gray-400"
-                  >Getting started</a
-                >
-              </li>
-              <li
-                class="box-border py-2 text-sm font-normal text-left text-gray-500 md:text-base md:mb-1"
-              >
-                <a
-                  href="#_"
-                  class="text-base leading-tight no-underline bg-transparent cursor-pointer hover:text-gray-400"
-                  >Report a bug</a
-                >
-              </li>
-              <li
-                class="box-border py-2 text-sm font-normal text-left text-gray-500 md:text-base md:mb-1"
-              >
-                <a
-                  href="#_"
-                  class="text-base leading-tight no-underline bg-transparent cursor-pointer hover:text-gray-400"
-                  >Press Kit</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
 
+  <!-- Section 1 -->
+  <section class="w-full bg-green-800">
+    <div class="px-8 py-12 mx-auto max-w-7xl">
       <div
-        class="flex flex-col items-center justify-between w-full py-3 text-xs leading-none text-gray-500 border-t border-gray-800 lg:flex-row"
+        class="grid grid-cols-2 gap-10 mb-3 md:grid-cols-3 lg:grid-cols-12 lg:gap-20"
       >
-        <div
-          class="flex self-start flex-grow-0 flex-shrink-0 w-full leading-none lg:w-auto"
-        >
-          <span
-            class="inline-flex justify-center w-full mt-4 space-x-5 sm:ml-auto sm:mt-0"
+        <div class="col-span-3">
+          <a
+            href="#_"
+            class="text-xl font-black leading-none text-white select-none logo"
+            >龙猫实验室.</a
           >
-            <a href="#" class="text-gray-400 hover:text-gray-200">
+          <p class="my-4 text-xs leading-normal text-yellow-300">
+            Beautifully hand-crafted components to help you build amazing pages.
+          </p>
+        </div>
+        <nav class="col-span-1 md:col-span-1 lg:col-span-2">
+          <p
+            class="mb-3 text-xs font-semibold tracking-wider text-yellow-200 uppercase"
+          >
+            Product
+          </p>
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Features</a
+          >
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Integrations</a
+          >
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Documentation</a
+          >
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >FAQs</a
+          >
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Pricing</a
+          >
+        </nav>
+        <nav class="col-span-1 md:col-span-1 lg:col-span-2">
+          <p
+            class="mb-3 text-xs font-semibold tracking-wider text-yellow-200 uppercase"
+          >
+            About
+          </p>
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Our Story</a
+          >
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Company</a
+          >
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Privacy</a
+          >
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Blog</a
+          >
+        </nav>
+        <nav class="col-span-2 md:col-span-1 lg:col-span-2">
+          <p
+            class="mb-3 text-xs font-semibold tracking-wider text-yellow-200 uppercase"
+          >
+            Contact
+          </p>
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Advertising</a
+          >
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Press</a
+          >
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Email</a
+          >
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Partners</a
+          >
+          <a
+            href="#"
+            class="flex mb-3 text-sm font-medium text-yellow-100 transition md:mb-2 hover:text-white"
+            >Jobs</a
+          >
+        </nav>
+        <div class="col-span-3">
+          <span
+            class="inline-flex justify-center w-full mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-end"
+          >
+            <a href="#" class="text-yellow-100 hover:text-white">
               <span class="sr-only">Facebook</span>
               <svg
                 class="w-6 h-6"
@@ -195,11 +124,12 @@
                   fill-rule="evenodd"
                   d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
                   clip-rule="evenodd"
+                  class=""
                 ></path>
               </svg>
             </a>
 
-            <a href="#" class="text-gray-400 hover:text-gray-200">
+            <a href="#" class="text-yellow-100 hover:text-white">
               <span class="sr-only">Instagram</span>
               <svg
                 class="w-6 h-6"
@@ -215,7 +145,7 @@
               </svg>
             </a>
 
-            <a href="#" class="text-gray-400 hover:text-gray-200">
+            <a href="#" class="text-yellow-100 hover:text-white">
               <span class="sr-only">Twitter</span>
               <svg
                 class="w-6 h-6"
@@ -229,7 +159,7 @@
               </svg>
             </a>
 
-            <a href="#" class="text-gray-400 hover:text-gray-200">
+            <a href="#" class="text-yellow-100 hover:text-white">
               <span class="sr-only">GitHub</span>
               <svg
                 class="w-6 h-6"
@@ -245,7 +175,7 @@
               </svg>
             </a>
 
-            <a href="#" class="text-gray-400 hover:text-gray-200">
+            <a href="#" class="text-yellow-100 hover:text-white">
               <span class="sr-only">Dribbble</span>
               <svg
                 class="w-6 h-6"
@@ -257,46 +187,33 @@
                   fill-rule="evenodd"
                   d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
                   clip-rule="evenodd"
+                  class=""
                 ></path>
               </svg>
             </a>
           </span>
         </div>
-        <ul
-          class="flex my-6 text-sm text-gray-500 list-none lg:flex-grow-0 lg:flex-shrink-0 lg:my-0"
-        >
-          <li class="box-border block font-semibold text-left">
-            <a
-              href="#_"
-              class="pr-5 mr-5 text-gray-500 no-underline bg-transparent border-r border-gray-700 cursor-pointer"
-              >Terms of service</a
-            >
-          </li>
-          <li class="box-border block font-semibold text-left">
-            <a
-              href="#_"
-              class="pr-5 mr-5 text-gray-500 no-underline bg-transparent border-r border-gray-700 cursor-pointer"
-              >Privacy policy</a
-            >
-          </li>
-          <li class="box-border block font-semibold text-left">
-            <a
-              href="#_"
-              class="pr-5 mr-5 text-gray-500 no-underline bg-transparent border-r border-gray-700 cursor-pointer"
-              >Licenses</a
-            >
-          </li>
-          <li class="box-border block font-semibold text-left">
-            <a
-              href="#_"
-              class="text-gray-500 no-underline bg-transparent cursor-pointer"
-              >Sitemap</a
-            >
-          </li>
-        </ul>
-        <p class="block m-0 text-base font-semibold text-gray-500">
-          Copyright © 2021 Tails
+      </div>
+      <div
+        class="flex flex-col items-start justify-between pt-10 mt-10 border-t border-green-700 md:flex-row md:items-center"
+      >
+        <p class="mb-6 text-sm text-left text-yellow-200 md:mb-0">
+          © Copyright 2021 Tails. All Rights Reserved.
         </p>
+        <div
+          class="flex items-start justify-start space-x-6 md:items-center md:justify-center"
+        >
+          <a
+            href="#_"
+            class="text-sm text-yellow-200 transition hover:text-white"
+            >Terms</a
+          >
+          <a
+            href="#_"
+            class="text-sm text-yellow-200 transition hover:text-white"
+            >Privacy</a
+          >
+        </div>
       </div>
     </div>
   </section>
