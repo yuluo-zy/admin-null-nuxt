@@ -34,7 +34,7 @@
       data-wow-duration="2s"
       data-wow-offset="50"
     >
-      <LongMaoEquipment />
+      <LongMaoEquipment :test-info="testInfo" />
     </div>
     <div
       class="wow animate__backInLeft animate__slow"
@@ -42,7 +42,7 @@
       data-wow-duration="2s"
       data-wow-offset="50"
     >
-      <LongMaoPaper />
+      <LongMaoPaper :paper-info="paperInfo" />
     </div>
     <div
       class="wow animate__backInLeft animate__slow"
@@ -50,7 +50,7 @@
       data-wow-duration="2s"
       data-wow-offset="50"
     >
-      <LongMaoFQE />
+      <LongMaoFQE :problem-info="problemInfo" />
     </div>
     <TwFootBar />
   </div>
@@ -66,6 +66,8 @@ import LongMaoInfo from '~/components/Home/LongMaoInfo'
 import LongMaoEquipment from '~/components/Home/LongMaoEquipment'
 import LongMaoPaper from '~/components/Home/LongMaoPaper'
 import LongMaoFQE from '~/components/Home/LongMaoFQE'
+import config from '~/config/config'
+
 export default {
   components: {
     TwHeaders,
@@ -77,6 +79,24 @@ export default {
     LongMaoEquipment,
     LongMaoPaper,
     LongMaoFQE,
+  },
+  data() {
+    return {
+      //
+    }
+  },
+  async asyncData({ $axios }) {
+    const [test, paper, problem] = await Promise.all([
+      $axios.$get(config.baseUrl + '/test/?page_size=4'),
+      $axios.$get(config.baseUrl + '/recommend/?page_size=4'),
+      $axios.$get(config.baseUrl + '/common/?page_size=4'),
+    ])
+    // this.testInfo = res.results
+    return {
+      testInfo: test.results,
+      paperInfo: paper.results,
+      problemInfo: problem.results,
+    }
   },
   mounted() {
     // eslint-disable-next-line no-undef

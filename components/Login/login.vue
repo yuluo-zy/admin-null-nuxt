@@ -66,7 +66,9 @@ export default {
           password: this.password,
         },
       }).then((res) => {
-        this.$cookies.set(config.TOKEN_KEY, res.access)
+        this.$cookies.set(config.TOKEN_KEY, res.access, {
+          maxAge: 60 * 60 * 3,
+        })
         this.$store.commit('setToken', res.access)
         if (
           !this.$route.query.path ||
